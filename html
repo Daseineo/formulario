@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visita PILARES Mantenimiento</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--dark-color);
+            font-size: 22px;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light-color);
+            border-radius: 8px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+        
+        .form-group {
+            flex: 1 1 300px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: var(--primary-color);
+        }
+        
+        .signature-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .signature-box {
+            flex: 1 1 300px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+        
+        .material-table {
+            overflow-x: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .form-section {
+                padding: 15px;
+            }
+            
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .form-group {
+                flex: 1 1 100%;
+            }
+            
+            th, td {
+                padding: 6px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SUBSISTEMA DE EDUCACIÓN COMUNITARIA "PILARES"</h1>
+            <p>COORDINACIÓN GENERAL<br>
+            DIRECCIÓN DE EDUCACIÓN PARTICIPATIVA Y COMUNITARIA<br>
+            SUBDIRECCIÓN DE APRENDIZAJE DE TECNOLOGÍAS</p>
+            <h2>VISITA PILARES MANTENIMIENTO</h2>
+        </header>
+
+        <form id="pilaresForm">
+            <div class="form-section">
+                <h2>Información del PILARES</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cct">CCT:</label>
+                        <input type="text" id="cct" name="cct" value="270-12-12P">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre del PILARES:</label>
+                        <input type="text" id="nombre" name="nombre" value="SAN JUAN JOYA">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de la visita:</label>
+                        <input type="date" id="fecha" name="fecha" value="2025-07-08">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Detalles del servicio</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="computadoras">Computadoras:</label>
+                        <input type="number" id="computadoras" name="computadoras" value="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="marca">MARCA:</label>
+                        <input type="text" id="marca" name="marca" value="HP">
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">MODELO:</label>
+                        <input type="text" id="modelo" name="modelo" value="70S G4 SF1">
+                    </div>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Si</th>
+                        <th>No</th>
+                    </tr>
+                    <tr>
+                        <td>Apertura de equipos de cómputo para limpieza interna</td>
+                        <td><input type="checkbox" name="limpieza" value="si"></td>
+                        <td><input type="checkbox" name="limpieza" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Reparación de equipos sin Internet</td>
+                        <td><input type="checkbox" name="reparacion" value="si"></td>
+                        <td><input type="checkbox" name="reparacion" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Visita al Site para verificar fallas</td>
+                        <td><input type="checkbox" name="visita" value="si"></td>
+                        <td><input type="checkbox" name="visita" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>Instalación de Backup del sistema operativo Windows 10</td>
+                        <td><input type="checkbox" name="backup" value="si"></td>
+                        <td><input type="checkbox" name="backup" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>El LCPO estuvo en el momento de la visita.</td>
+                        <td><input type="checkbox" name="lcpo" value="si"></td>
+                        <td><input type="checkbox" name="lcpo" value="no"></td>
+                    </tr>
+                    <tr>
+                        <td>El Site se encuentra libre de material externo al equipo de red</td>
+                        <td><input type="checkbox" name="site_libre" value="si"></td>
+                        <td><input type="checkbox" name="site_libre" value="no"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h2>Observaciones</h2>
+                <div class="form-group">
+                    <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Observaciones adicionales</h2>
+                <div class="form-group">
+                    <textarea id="observaciones_adicionales" name="observaciones_adicionales" rows="6"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Material proporcionado</h2>
+                <div class="material-table">
+                    <table>
+                        <tr>
+                            <th>Material</th>
+                            <th>Cantidad destinada / Ciber</th>
+                            <th>Cantidad destinada / Area de Tecnologías</th>
+                        </tr>
+                        <tr>
+                            <td>Memorias RAM DDR4 de 86b</td>
+                            <td><input type="number" name="ram_cite" value=""></td>
+                            <td><input type="number" name="ram_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Cables de corriente</td>
+                            <td><input type="number" name="cables_corriente_cite" value=""></td>
+                            <td><input type="number" name="cables_corriente_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Cables de red</td>
+                            <td><input type="number" name="cables_red_cite" value="3"></td>
+                            <td><input type="number" name="cables_red_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Cables de vídeo</td>
+                            <td><input type="number" name="cables_video_cite" value=""></td>
+                            <td><input type="number" name="cables_video_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Pilas de BIOS</td>
+                            <td><input type="number" name="pilas_cite" value=""></td>
+                            <td><input type="number" name="pilas_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td><input type="number" name="mouse_cite" value="1"></td>
+                            <td><input type="number" name="mouse_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td>Teclados</td>
+                            <td><input type="number" name="teclados_cite" value="2"></td>
+                            <td><input type="number" name="teclados_area" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="Otros materiales" name="otros_desc"></td>
+                            <td><input type="number" name="otros_cite" value=""></td>
+                            <td><input type="number" name="otros_area" value=""></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="signature-area">
+                <div class="signature-box">
+                    <label for="tecnico">Nombre y firma del Técnico:</label>
+                    <input type="text" id="tecnico" name="tecnico" value="">
+                </div>
+                <div class="signature-box">
+                    <label for="lcpo_firma">Nombre y firma del LCPO:</label>
+                    <input type="text" id="lcpo_firma" name="lcpo_firma" value="">
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <button type="submit" class="btn">Guardar Formulario</button>
+                <button type="button" class="btn" style="background: var(--accent-color); margin-left: 10px;" onclick="window.print()">Imprimir Formulario</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('pilaresForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulario guardado con éxito. En una implementación real, estos datos se enviarían a un servidor.');
+            // Aquí iría el código para enviar los datos a un servidor
+        });
+
+        // Evitar que se puedan seleccionar ambos checkboxes (Sí y No) en la misma fila
+        document.querySelectorAll('table input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const row = this.closest('tr');
+                const name = this.getAttribute('name');
+                const value = this.value;
+                
+                if (value === 'si') {
+                    row.querySelector(`input[name="${name}"][value="no"]`).checked = false;
+                } else {
+                    row.querySelector(`input[name="${name}"][value="si"]`).checked = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
